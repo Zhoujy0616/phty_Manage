@@ -19,30 +19,4 @@
 		AND `password` = #{password}
 	</select>
 
-    <!-- 查询用户名是否重复 -->
-    <select id="queryUserName" parameterType="User" resultType="User">
-		select * from t_user where username = #{username}
-	</select>
-
-    <!--&lt;!&ndash; 查询用户列表信息 &ndash;&gt;
-    <select id="queryUserList" resultMap="Cmap">
-        SELECT u.uid uId, u.uname,
-        d.did dId, d.dno, d.dname from t_user u, t_dept d
-        WHERE u.did = d.did
-    </select>
-    <resultMap type="User" id="Cmap">
-        <id property="uid" column="uId" />
-        <result property="uname" column="uname" />
-        <result property="did" column="did" />
-        <association property="dept" javaType="Dept">
-            <id property="did" column="dId" />
-            <result property="dno" column="dno" />
-            <result property="dname" column="dname" />
-        </association>
-    </resultMap>
-
-    &lt;!&ndash; 删除用户信息 &ndash;&gt;
-    <delete id="deleteUser" parameterType="int">
-        delete from t_user where uid = #{uid}
-    </delete>-->
 </mapper>
