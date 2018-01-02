@@ -1,0 +1,6 @@
+com\phty\entity\Role.class
+com\phty\entity\User.class
+com\phty\service\impl\UserServiceImpl.class
+com\phty\controller\UserController.class
+com\phty\service\UserService.class
+com\phty\mapper\UserMapper.class
