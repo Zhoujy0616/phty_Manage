@@ -25,11 +25,11 @@
 </head>
 <body>
 <input type="hidden" id="flag">
-<h2>登录页面</h2>
-<div style="margin:0 auto;border:1px solid #000;width:300px;height:100px">
+<div style="margin:0 auto;border:0px solid #000;width:300px;height:100px">
+    <h2>登录页面</h2>
     <form action="${pageContext.request.contextPath}/login/queryNamePass" method="post" id="form1">
-        用户名：<input type="text" id="username" name="username"> <br>
-        密码：<input type="password" id="password" name="password"> <br>
+        账号:<input type="text" id="username" name="username"> <br>
+        密码:<input type="password" id="password" name="password"> <br>
         <input id="btn" type="button" onclick="Formsubmit();" value="登录">
     </form>
 </div>

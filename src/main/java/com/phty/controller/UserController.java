@@ -20,7 +20,7 @@ public class UserController {
      *
      * @return
      */
-    @RequestMapping("toLogin")
+    @RequestMapping("/toLogin")
     public String toLogin() {
         return "login";
     }
