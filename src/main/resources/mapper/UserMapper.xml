@@ -8,15 +8,34 @@
 
     <!-- 查询用户名和密码 -->
     <select id="queryNamePass" parameterType="User" resultType="User">
-		SELECT
-		u.*
-		FROM
-		t_user u,
-		t_role r
-		WHERE
-		u.roleid = r.roleid
-		AND username = #{username}
-		AND `password` = #{password}
+		SELECT * from users WHERE staffId = #{staffId}
+		AND password = #{password}
 	</select>
 
+	<!--  查询用户角色 -->
+	<select id="findUserRoleId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+		SELECT
+			r.*
+		FROM
+			users u,
+			role r,
+			user_role_mapping urm
+		WHERE
+			u.userId = urm.userId
+		AND r.roleId = urm.roleId
+		AND u.userId = #{userid}
+	</select>
+
+	<!--  查询角色对应的菜单列表 -->
+	<select id="findMenuByUserId" parameterType="java.lang.Integer" resultType="Menu">
+		SELECT m.* from
+		role r,
+		menu m,
+		role_menu_mapping rmm
+		WHERE
+		r.roleId = rmm.roleId
+		and m.menuId = rmm.menuId
+		AND r.roleId = #{roleId}
+
+	</select>
 </mapper>

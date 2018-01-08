@@ -1,0 +1,19 @@
+.clareFlex:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.quota>a{
+    float: right;
+    margin-top: -13px;
+    line-height: 25px;
+    margin-right: 13px;
+}
+.quota{
+    padding: 25px;
+
+}
+.admin-table-page .pages{
+    float: right;
+    padding-right: 20px;
+}

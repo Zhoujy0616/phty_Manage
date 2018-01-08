@@ -3,6 +3,8 @@ package com.phty.interceptor;/**
  */
 
 
+import com.phty.utils.WebConstants;
+import com.phty.vo.ActiveUser;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,10 +22,20 @@ public class LoginInterceptor implements HandlerInterceptor {
     // 在调用Controller中的请求处理方法之前进行执行
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-
-
-
-        return false;
+        String uri = httpServletRequest.getRequestURI();
+        if (uri.contains("/user/login") || uri.contains("/user/toLogin.do")){
+            return true;
+        }
+        // 从session中获取登录后用户信息
+        ActiveUser activeUser = (ActiveUser) httpServletRequest.getSession().getAttribute(WebConstants.ACTIVE_USER);
+        if (null != activeUser){
+            // 放行
+            return true;
+        }else{
+            // 跳到登录页面
+            httpServletRequest.getRequestDispatcher("/user/toLogin.do").forward(httpServletRequest, httpServletResponse);
+            return false;
+        }
     }
     // 在调用Controller中的请求处理方法之后进行执行
     @Override

@@ -1,0 +1,21 @@
+.admin-main{
+	margin: 0px;
+}
+.admin-main .layui-field-title .layui-field-box{
+	padding: 10px 30px;
+}
+.admin-main .layui-field-title .layui-field-box p{
+	padding: 5px 0;
+}
+.logo{
+    color: #fff;
+    float: left;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 25px;
+    text-align: center;
+    width: 150px;
+}
+.layui-layout-admin .layui-main{
+	margin: 0;
+}

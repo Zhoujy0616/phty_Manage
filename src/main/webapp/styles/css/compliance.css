@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+.tablelist th {
+	border-right: dotted 1px #c7c7c7;
+}
+
+.dialog-form {
+	padding-left: 23px;
+}
+
+.dialog-form li {
+	margin-bottom: 13px;
+	clear: both;
+}
+
+.dialog-form li label {
+	width: 80px;
+	line-height: 34px;
+	display: block;
+	float: left;
+}
+
+.dialog-form li i {
+	color: #7f7f7f;
+	padding-left: 20px;
+	font-style: normal;
+}
+
+.dialog-form li cite {
+	display: block;
+	padding-top: 10px;
+}
+
+.dialog-form b {
+	color: #ea2020;
+	padding-left: 3px;
+}
+
+.chat-detail {
+	color: #00a4ac;
+	text-decoration: underline;
+}
+
+.chat-detail:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.check-true, .check-false {
+	cursor: pointer;
+}
+
+.check-true img {
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	padding-right: 2px;
+}
+
+.check-false img {
+	width: 18px;
+	height: 18px;
+	margin-left: 6px;
+	vertical-align: middle;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.dialogtitle {
+	height: 40px;
+	line-height: 40px;
+	background: url(images/tcbg.gif) repeat-x;
+}
+
+.title-text{
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	float: left;
+	text-indent: 20px;
+}
+
+.title-close {
+	float: right;
+	font-weight: bold;
+	color: #fff;
+	font-size: 20px;
+	padding-right: 10px;
+	cursor: pointer;
+}
