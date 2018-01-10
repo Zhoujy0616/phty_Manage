@@ -36,6 +36,6 @@
 		r.roleId = rmm.roleId
 		and m.menuId = rmm.menuId
 		AND r.roleId = #{roleId}
-		/*GROUP BY m.prioirty*/
+
 	</select>
 </mapper>
